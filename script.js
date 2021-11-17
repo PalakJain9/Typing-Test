@@ -1,5 +1,5 @@
 let timer_area = document.getElementById("tim_er");
-let total_time = 15;
+let total_time = 60;
 let btn_wpm = document.getElementById("wpm");
 let btn_error = document.getElementById("error");
 let btn_accuracy = document.getElementById("accuracy");
