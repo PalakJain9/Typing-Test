@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body {
+    padding: 0.5rem 7rem;
+}
+
+.logo {
+    cursor: pointer;
+    font-size: 1.3rem;
+    padding-top: 0.5rem;
+    position: relative;
+}
+
+.logo::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 5rem;
+    height: 0.5rem;
+    background-color: #fcc773;
+    z-index: -1;
+    transform: translateX(-5.5rem) translateY(0.9rem);
+}
+
+.main_body {
+    height: 70vh;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.results {
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.type_area {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.display {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+}
+
+button {
+    text-align: center;
+    width: 10rem;
+    height: 5rem;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: 0.02rem solid #fca311;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+#restart {
+    text-align: center;
+    width: 8rem;
+    height: 5rem;
+    background-color: #fca311;
+    color: white;
+}
+
+#comp_input {
+    font-size: 1.7rem;
+}
+
+#tim_er {
+    font-size: 1.8rem;
+    color: #fca311;
+}
+
+.type_area input {
+    width: 25rem;
+    height: 5rem;
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: 0.02rem solid #fca311;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1023.9px) {
+    html {
+        font-size: 93%;
+    }
+
+    body {
+        padding: 1rem 5rem;
+    }
+}
+
+
+
+@media only screen 
+and (min-device-width : 481px) 
+and (max-device-width : 813px) {
+    html {
+        font-size: 85%;
+    }
+
+    body {
+        padding: 1rem 2rem;
+    }
+    
+    button {
+        width: 8rem;
+        height: 6rem;
+        font-size: 1.3rem;
+    }
+
+    #restart {
+        width: 8rem;
+        height: 5rem;
+    }
+    
+    #comp_input {
+        font-size: 1.35rem;
+    }
+    
+    #tim_er {
+        font-size: 1.25rem;
+    }
+    
+    .type_area input {
+        width: 18rem;
+        height: 4rem;
+    }
+}
+
+
+
+
+/*mobile phone*/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+    html {
+        font-size: 81%;
+    }
+
+    body {
+        padding: 0.5rem 1rem;
+    }
+
+    .results {
+        flex-wrap: wrap;
+    }
+    
+    button {
+        width: 7rem;
+        height: 5rem;
+        font-size: 1.25rem;
+    }
+
+    #restart {
+        width: 7rem;
+        height: 4rem;
+    }
+    
+    #comp_input {
+        font-size: 1.3rem;
+    }
+    
+    #tim_er {
+        font-size: 1.15rem;
+    }
+    
+    .type_area input {
+        width: 15rem;
+        height: 4rem;
+    }
+}

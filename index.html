@@ -4,44 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Typing Test</title>
 </head>
 <body>
-    <!--this container has all contents inside-->
-    <div class="container">
-        <div class="timer">
-            <p id="tim_er"></p>
+    <p class="logo">Typing Test</p>
+
+    <div class="main_body">
+        <!--this container has all contents inside-->
+        <div class="container">
+
+            <div class="results">
+                <button id="wpm" style="display: none;">WPM: </button>
+                <button id="error" style="display: none;">Errors: </button>
+                <button id="accuracy" style="display: none;">Accuracy: </button>
+            </div>
+
+            <div class="type_area">
+                <div class="display">
+                    <div class="wordDisplayArea"><p id="comp_input"></p></div>
+                    <div class="timer">
+                        <p id="tim_er"></p>
+                    </div>
+                </div>
+        
+                <input type = "text" maxlength="15" class="typingArea" id="user_input" onkeyup="get_user_word(this)" autocomplete="off" placeholder="Type here" />
+            </div>
+
+            <button id="restart" style="display: none;">Restart</button>
         </div>
-
-        <div class="results">
-            <button id="wpm" style="display: none;">WPM: </button>
-            <button id="error" style="display: none;">Errors: </button>
-            <button id="accuracy" style="display: none;">Accuracy: </button>
-        </div>
-
-        <div class="wordDisplayArea"><p id="comp_input"></p></div>
-        <input type = "text" onclick="clear(this)" maxlength="15" class="typingArea" id="user_input" onkeypress="get_user_word(this)" autocomplete="off" />
-
-        <button id="restart" style="display: none;">Restart</button>
     </div>
 
-    <!--
-    //TO BE DISPLAYED ON SCREEN:
-    //timer ✔
-    //score = words per min 
-    //errors -> if incorrectly_typed -> error++
-    //accuracy = (correctly_typed/total_words)*100
-    //fetch random words ✔
-    //when time = 0sec -> stop game, display wpm, accuracy, errors ✔
-    //Restart ✔
-    //area where computer displays word ✔
-    //area where user types word (when space/enter pressed this
-    word will be submitted and new word displayed) ✔
-
-    //word displayed -> comp_input
-      user types word -> user_input
-      check if user_input == comp_input
-    -->
     <script src="script.js"></script>
 </body>
 </html>
