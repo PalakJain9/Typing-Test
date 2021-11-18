@@ -213,6 +213,10 @@ and (max-device-width : 480px) {
     body {
         padding: 0.5rem 1rem;
     }
+    
+    .container {
+        padding-left: 3rem;
+    }
 
     .type_area input {
         width: 70vw;
