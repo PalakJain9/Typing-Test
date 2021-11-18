@@ -18,6 +18,7 @@ let score_error = 0;
 let typed_words = 0;
 let total_words = 0;
 let last_input = "";
+let score_area = document.getElementById("score");
 
 timer_area.innerHTML = total_time + "s";
 
@@ -88,7 +89,8 @@ const typingTest = () => {
         btn_wpm.style.display = "inline-block"; btn_wpm.innerText = score_wpm + " WPM";
         btn_error.style.display = "inline-block"; btn_error.innerText = "Errors: " + score_error;
         btn_accuracy.style.display = "inline-block"; btn_accuracy.innerText = "Accuracy: " + accuracy + "%";
-        btn_restart.style.display = "block"; btn_restart.innerText = "Restart";
+        btn_restart.style.display = "block"; btn_restart.innerText = "RESTART";
+        score_area.style.display = "inline-block";
         word_area.style.display = "none"; user_type_area.style.display = "none";
         timer_area.style.display = "none";
 
@@ -110,11 +112,15 @@ const typingTest = () => {
         btn_restart.style.display = "block";
         user_type_area.style.display = "none";
         timer_area.style.display = "none";
-        btn_restart.innerText = "Start";
+        btn_restart.innerText = "START";
+        score_area.style.display = "none";
+        document.getElementById("logo").style.display = "none";
         btn_restart.addEventListener('click', () => {
             btn_restart.style.display = "none";
             timer_area.style.display = "inline-block";
             user_type_area.style.display = "block";
+            document.getElementById("logo").style.display = "inline-block";
+            document.getElementById("head").style.display = "none";
             displayWord();
             setInterval(timer, 1000);
         });
